@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>From Info Windows to a Database: Saving User-Added Form Data</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <form class="search">
+    <input type="text" id="search" onkeyup="showResult(this.value)" placeholder="Search..." />
+    <ul class="results" id="livesearch">
+
+    </ul>
+  </form>
+
+  <div id="map" height="460px" width="100%"></div>
+  <div style="display:none;">
+    <div id="form">
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td><input type='text' id='name' /> </td>
+        </tr>
+        <tr>
+          <td>Note:</td>
+          <td><textarea id='note'></textarea> </td>
+        </tr>
+        <tr>
+          <td><input type='button' value='Save' onclick='saveData()' /></td>
+          <td><input type='button' value='Cancel' onclick='cancelSave()' /></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript" src="script.js">
+
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDimi_gj4_P1-9FLIWQnX1wVfT3tWh0no4&callback=initMap" async
+    defer></script>
+</body>
+
+</html>
